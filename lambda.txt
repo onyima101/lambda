@@ -1,3 +1,23 @@
+IAM/LAMBDA/CLOUDWATCH/EC2
+1, Create IAM role
+a, lambda policy = AwsLambdaBasicExecutionRole
+b, EC2 = AmazonEc2FullAccess
+OR
+use custompolicy.json in repo
+
+2, In Lambda, create python function (for start & stop EC2)
+a, use start.py & stop.py respectively.
+
+3, Tag EC2 instance appropriately
+
+4, In Cloudwatch, go to rule, create new rules
+a, for the cron set = 00 17 ? * MON-FRI *
+b, Select Lambda fxn created earlier
+c, after execution, view logs on cloudwatch 
+
+
+
+
 #### START
 
 import boto3
