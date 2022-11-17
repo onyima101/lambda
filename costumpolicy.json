@@ -1,0 +1,47 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:RunInstances",
+                "ec2:CopySnapshot",
+                "ec2:CreateTags",
+                "rds:DescribeDBInstances",
+                "rds:CreateDBSnapshot",
+                "rds:DeleteDBSnapshot",
+                "rds:DescribeDBSnapshots",
+                "rds:ListTagsForResource",
+                "lambda:AddPermission",
+                "lambda:CreateFunction",
+                "lambda:InvokeFunction",
+                "apigateway:PUT",
+                "apigateway:POST",
+                "apigateway:GET",
+                "ssm:SendCommand",
+                "ec2:CreateNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DeleteNetworkInterface",
+                "ec2:AssignPrivateIpAddresses",
+                "ec2:UnassignPrivateIpAddresses",
+                "ec2:DescribeInstances",
+                "ec2:DescribeVolumes",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots",
+                "ec2:Start*",
+                "ec2:Stop*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
